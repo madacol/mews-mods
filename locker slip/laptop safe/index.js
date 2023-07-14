@@ -179,11 +179,8 @@
     /**
      * get bill number and guest's name
      */
-    const bill_number = document.querySelector("[id^=heading] h2").outerText.split(' ')[1];
-    if (bill_number === 'preview') {
-        
-    };
-    const guest = document.querySelector('[data-test-id="customer-name-modal-opener"] span').outerText;
+    const bill_number = document.querySelector("[id^=heading] h2").outerText.split(' ').at(-1);
+    const guest = document.querySelector('[data-test-id="customer-name-modal-opener"] span').closest("a").outerText.trim();
     
     
     /**
